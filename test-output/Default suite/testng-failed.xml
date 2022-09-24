@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appium.TestLogin">
+      <class name="appium.TestAddItem">
         <methods>
-          <include name="beforeTest"/>
-          <include name="f" invocation-numbers="1"/>
+          <include name="f" invocation-numbers="1 2"/>
           <include name="afterTest"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- appium.TestLogin -->
+      </class> <!-- appium.TestAddItem -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

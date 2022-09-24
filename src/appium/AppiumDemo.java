@@ -43,7 +43,7 @@ public class AppiumDemo {
 		
 		// khai báo platform
         cap.setCapability("platformName", "Android");
-        cap.setCapability("deviceName", "WCY7N18316013223");
+        cap.setCapability("deviceName", "emulator-5554");
         driver = new AndroidDriver<WebElement>(new URL("http://localhost:4723/wd/hub"), cap);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
