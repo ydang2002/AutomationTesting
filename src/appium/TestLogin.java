@@ -1,40 +1,22 @@
 package appium;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.google.common.collect.Table.Cell;
-
-import app.login;
 import appiumExcel.Links;
 import appiumExcel.ReadFile;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.sl.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class TestLogin {
-	private login login;
 	
 	AppiumDriver<WebElement> driver;
     String fileName = "app-release.apk";
@@ -64,25 +46,7 @@ public class TestLogin {
 //			logIn(excel.getCellData("user", i), excel.getCellData("password", i));
 //			
 //		}
-		WebElement edtMail = driver.findElement(By.id("com.nhuy.todolist:id/loginEmail"));
-		edtMail.clear();
-		edtMail.sendKeys(email);
-		
-		WebElement edtPassword = driver.findElement(By.id("com.nhuy.todolist:id/loginPassword"));
-		edtPassword.clear();
-		edtPassword.sendKeys(password);
-		
-		WebElement btnLogin = driver.findElement(By.id("com.nhuy.todolist:id/loginButton"));
-		btnLogin.click();
-				
-	}
-	
-	@AfterTest
-	public void afterTest() {
-		driver.quit();//thoát
-	}
-	
-//	public void logIn(String email, String password) {
+    	
 //		WebElement edtMail = driver.findElement(By.id("com.nhuy.todolist:id/loginEmail"));
 //		edtMail.clear();
 //		edtMail.sendKeys(email);
@@ -93,8 +57,29 @@ public class TestLogin {
 //		
 //		WebElement btnLogin = driver.findElement(By.id("com.nhuy.todolist:id/loginButton"));
 //		btnLogin.click();
-//		//driver.findElement(edtMail).sen
-//	}
+    	
+    	logIn(email, password);
+    					
+	}
+	
+	@AfterTest
+	public void afterTest() {
+		driver.quit();//thoát
+	}
+	
+	public void logIn(String email, String password) {
+		WebElement edtMail = driver.findElement(By.id("com.nhuy.todolist:id/loginEmail"));
+		edtMail.clear();
+		edtMail.sendKeys(email);
+		
+		WebElement edtPassword = driver.findElement(By.id("com.nhuy.todolist:id/loginPassword"));
+		edtPassword.clear();
+		edtPassword.sendKeys(password);
+		
+		WebElement btnLogin = driver.findElement(By.id("com.nhuy.todolist:id/loginButton"));
+		btnLogin.click();
+		//driver.findElement(edtMail).sen
+	}
 	
 	@DataProvider(name = "loginData")
 	public Object[][] dataProvider() throws Exception {

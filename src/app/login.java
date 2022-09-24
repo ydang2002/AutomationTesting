@@ -8,7 +8,7 @@ import io.appium.java_client.AppiumDriver;
 public class login {
 	AppiumDriver<WebElement> driver;
 	
-	public void logIn(String email, String password) {
+	public void logInapp(String email, String password) {
 		WebElement edtMail = driver.findElement(By.id("com.nhuy.todolist:id/loginEmail"));
 		edtMail.clear();
 		edtMail.sendKeys(email);

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-23T20:15:57 ICT" name="Default suite" finished-at="2022-09-23T20:16:30 ICT" duration-ms="33147">
+  <suite started-at="2022-09-24T07:10:40 ICT" name="Default suite" finished-at="2022-09-24T07:11:08 ICT" duration-ms="27345">
     <groups>
     </groups>
-    <test started-at="2022-09-23T20:15:57 ICT" name="Default test" finished-at="2022-09-23T20:16:30 ICT" duration-ms="33147">
+    <test started-at="2022-09-24T07:10:40 ICT" name="Default test" finished-at="2022-09-24T07:11:08 ICT" duration-ms="27345">
       <class name="appium.TestLogin">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:appium.TestLogin@6bf0219d]" started-at="2022-09-23T20:15:57 ICT" name="beforeTest" finished-at="2022-09-23T20:16:11 ICT" duration-ms="14373" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:appium.TestLogin@dd0c991]" started-at="2022-09-24T07:10:40 ICT" name="beforeTest" finished-at="2022-09-24T07:10:50 ICT" duration-ms="9967" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@6bf0219d]" started-at="2022-09-23T20:16:11 ICT" name="f" data-provider="loginData" finished-at="2022-09-23T20:16:15 ICT" duration-ms="4007" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@dd0c991]" started-at="2022-09-24T07:10:51 ICT" name="f" data-provider="loginData" finished-at="2022-09-24T07:10:54 ICT" duration-ms="3643" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@6bf0219d]" started-at="2022-09-23T20:16:15 ICT" name="f" data-provider="loginData" finished-at="2022-09-23T20:16:16 ICT" duration-ms="901" status="FAIL">
+        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@dd0c991]" started-at="2022-09-24T07:10:54 ICT" name="f" data-provider="loginData" finished-at="2022-09-24T07:10:55 ICT" duration-ms="937" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -43,23 +43,23 @@
           <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
               <![CDATA[androidx.test.uiautomator.StaleObjectException (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 631 milliseconds
+Command duration or timeout: 634 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
 System info: host: 'LAPTOP-38ED4DO3', ip: '192.168.2.91', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{deviceScreenSize=1080x2280, networkConnectionEnabled=true, statBarHeight=90, warnings={}, viewportRect={top=90, left=0, width=1080, height=1970}, databaseEnabled=false, deviceName=WCY7N18316013223, platform=LINUX, deviceUDID=WCY7N18316013223, desired={platformName=Android, deviceName=WCY7N18316013223}, platformVersion=9, pixelRatio=3, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceScreenDensity=480, deviceModel=ANE-LX2, platformName=Android, deviceApiLevel=28, deviceManufacturer=HUAWEI}]
-Session ID: f99a45be-1b15-436d-b9bd-d1ac07e1a951]]>
+Session ID: 18635449-7012-47d5-ac1d-387e8814ae9d]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 631 milliseconds
+Command duration or timeout: 634 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
 System info: host: 'LAPTOP-38ED4DO3', ip: '192.168.2.91', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{deviceScreenSize=1080x2280, networkConnectionEnabled=true, statBarHeight=90, warnings={}, viewportRect={top=90, left=0, width=1080, height=1970}, databaseEnabled=false, deviceName=WCY7N18316013223, platform=LINUX, deviceUDID=WCY7N18316013223, desired={platformName=Android, deviceName=WCY7N18316013223}, platformVersion=9, pixelRatio=3, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceScreenDensity=480, deviceModel=ANE-LX2, platformName=Android, deviceApiLevel=28, deviceManufacturer=HUAWEI}]
-Session ID: f99a45be-1b15-436d-b9bd-d1ac07e1a951
+Session ID: 18635449-7012-47d5-ac1d-387e8814ae9d
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -76,7 +76,8 @@ at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobil
 at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
 at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
 at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:140)
-at appium.TestLogin.f(TestLogin.java:68)
+at appium.TestLogin.logIn(TestLogin.java:72)
+at appium.TestLogin.f(TestLogin.java:61)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,7 +112,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@6bf0219d]" started-at="2022-09-23T20:16:16 ICT" name="f" data-provider="loginData" finished-at="2022-09-23T20:16:21 ICT" duration-ms="4359" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@dd0c991]" started-at="2022-09-24T07:10:55 ICT" name="f" data-provider="loginData" finished-at="2022-09-24T07:10:59 ICT" duration-ms="4177" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -127,7 +128,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@6bf0219d]" started-at="2022-09-23T20:16:21 ICT" name="f" data-provider="loginData" finished-at="2022-09-23T20:16:25 ICT" duration-ms="4002" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@dd0c991]" started-at="2022-09-24T07:10:59 ICT" name="f" data-provider="loginData" finished-at="2022-09-24T07:11:03 ICT" duration-ms="3405" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -143,7 +144,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@6bf0219d]" started-at="2022-09-23T20:16:25 ICT" name="f" data-provider="loginData" finished-at="2022-09-23T20:16:29 ICT" duration-ms="4675" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String)[pri:0, instance:appium.TestLogin@dd0c991]" started-at="2022-09-24T07:11:03 ICT" name="f" data-provider="loginData" finished-at="2022-09-24T07:11:07 ICT" duration-ms="4390" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -159,7 +160,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:appium.TestLogin@6bf0219d]" started-at="2022-09-23T20:16:29 ICT" name="afterTest" finished-at="2022-09-23T20:16:30 ICT" duration-ms="261" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:appium.TestLogin@dd0c991]" started-at="2022-09-24T07:11:07 ICT" name="afterTest" finished-at="2022-09-24T07:11:08 ICT" duration-ms="302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
