@@ -16,8 +16,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
-public class TestLogin {
-	
+public class TestUpdate {
 	AppiumDriver<WebElement> driver;
     String fileName = "app-release.apk";
     File calculatorApp = new File("D:\\src\\Android\\app\\AppToDoList\\app\\release" + fileName);
@@ -33,36 +32,48 @@ public class TestLogin {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
     
-    @Test(dataProvider="loginData")
-	public void f(String email, String password) throws Exception {
-    	
-    	logIn(email, password);
-    					
-	}
-	
-	@AfterTest
+    @Test(dataProvider="update")
+	public void f(String task, String description) throws Exception {
+    	upDate(task, description);
+    }
+    
+    @AfterTest
 	public void afterTest() {
 		driver.quit();//thoát
 	}
-	
-	public void logIn(String email, String password) {
-		WebElement edtMail = driver.findElement(By.id("com.nhuy.todolist:id/loginEmail"));
-		edtMail.clear();
-		edtMail.sendKeys(email);
+    
+    public void upDate(String task, String description) {
+    	
+    	WebElement retrieved = driver.findElement(By.id("com.nhuy.todolist:id/retrieved"));
+    	retrieved.click();
+    	
+    	WebElement edtTask = driver.findElement(By.id("com.nhuy.todolist:id/mEditTextTask"));
+    	edtTask.clear();
+    	edtTask.sendKeys(task);
 		
-		WebElement edtPassword = driver.findElement(By.id("com.nhuy.todolist:id/loginPassword"));
-		edtPassword.clear();
-		edtPassword.sendKeys(password);
+		WebElement edtDescription = driver.findElement(By.id("com.nhuy.todolist:id/mEditTextDescription"));
+		edtDescription.clear();
+		edtDescription.sendKeys(description);
+
+		WebElement updateBtn = driver.findElement(By.id("com.nhuy.todolist:id/btnUpdate"));
+		updateBtn.click();
 		
-		WebElement btnLogin = driver.findElement(By.id("com.nhuy.todolist:id/loginButton"));
-		btnLogin.click();
-	}
-	
-	@DataProvider(name = "loginData")
+    	WebElement cancelBtn = driver.findElement(By.id("com.nhuy.todolist:id/cancelBtn"));
+    	cancelBtn.click();
+    }
+    
+    public void delete()  {
+    	WebElement retrieved = driver.findElement(By.id("com.nhuy.todolist:id/retrieved"));
+    	retrieved.click();
+    	WebElement deleteBtn = driver.findElement(By.id("com.nhuy.todolist:id/DeleteBtn"));
+    	deleteBtn.click();
+    }
+    
+    @DataProvider(name = "update")
 	public Object[][] dataProvider() throws Exception {
-		ReadFile.setExcelFile(Links.PATH_TO_EXCEL, "Sheet1");
+		ReadFile.setExcelFile(Links.PATH_TO_EXCEL, "Sheet2");
 		Object[][] testData = ReadFile.getTestData("invalid");
 		return testData;
 	}
-
 }
+

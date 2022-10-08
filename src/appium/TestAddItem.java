@@ -61,8 +61,6 @@ public class TestAddItem {
     	WebElement cancelBtn = driver.findElement(By.id("com.nhuy.todolist:id/cancelBtn"));
     	cancelBtn.click();
     	
-//    	WebElement retrieved = driver.findElement(By.id("com.nhuy.todolist:id/retrieved"));
-//    	retrieved.click();
     }
     
     @DataProvider(name = "addItem")
