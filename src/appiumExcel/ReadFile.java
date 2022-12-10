@@ -12,8 +12,8 @@ public class ReadFile {
 
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFSheet ExcelWSheet;
-
-	public static void setExcelFile(String path, String sheetName) throws Exception {
+//	setExcelFile: Xác định data ở sheet nào trong file excel
+		public static void setExcelFile(String path, String sheetName) throws Exception {
 		try {
 			// Open the Excel file
 			FileInputStream ExcelFile = new FileInputStream(path);
@@ -25,13 +25,16 @@ public class ReadFile {
 			throw (e);
 		}
 	}
+		
 
+//		getTestData: Lấy data và lưu vào các array
 	public static String[][] getTestData(String tableName) {
 		String[][] testData = null;
 
 		try {
 			// Handle numbers and strings
 			DataFormatter formatter = new DataFormatter();
+			// gọi findCells
 			XSSFCell[] boundaryCells = findCells(tableName);
 			XSSFCell startCell = boundaryCells[0];
 
@@ -56,6 +59,7 @@ public class ReadFile {
 		return testData;
 	}
 
+//	findCells: Tìm vị trí các cell có chứa data trong sheet
 	public static XSSFCell[] findCells(String tableName) {
 		DataFormatter formatter = new DataFormatter();
 		String pos = "begin";

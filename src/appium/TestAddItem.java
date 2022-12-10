@@ -8,7 +8,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import app.login;
 import appiumExcel.Links;
 import appiumExcel.ReadFile;
 import org.openqa.selenium.By;
@@ -19,8 +18,8 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class TestAddItem {
 	AppiumDriver<WebElement> driver;
-    String fileName = "app-release.apk";
-    File calculatorApp = new File("D:\\src\\Android\\app\\AppToDoList\\app\\release" + fileName);
+//    String fileName = "app-release.apk";
+//    File calculatorApp = new File("D:\\src\\Android\\app\\AppToDoList\\app\\release" + fileName);
     
     @BeforeTest
 	public void beforeTest() throws MalformedURLException {
@@ -34,8 +33,8 @@ public class TestAddItem {
 	}
     
     @Test(dataProvider="addItem")
-	public void f(String task, String description) throws Exception {
-    	addItem(task, description);
+	public void f(String task, String description, String result) throws Exception {
+    	addItem(task, description, result);
     }
     
     @AfterTest
@@ -43,7 +42,7 @@ public class TestAddItem {
 		driver.quit();//thoát
 	}
     
-    public void addItem(String task, String description) {
+    public void addItem(String task, String description, String result) {
     	WebElement fad = driver.findElement(By.id("com.nhuy.todolist:id/fab"));
     	fad.click();
     	

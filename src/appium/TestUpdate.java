@@ -18,8 +18,8 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class TestUpdate {
 	AppiumDriver<WebElement> driver;
-    String fileName = "app-release.apk";
-    File calculatorApp = new File("D:\\src\\Android\\app\\AppToDoList\\app\\release" + fileName);
+//    String fileName = "app-release.apk";
+//    File calculatorApp = new File("D:\\src\\Android\\app\\AppToDoList\\app\\release" + fileName);
     
     @BeforeTest
 	public void beforeTest() throws MalformedURLException {
@@ -31,10 +31,16 @@ public class TestUpdate {
         driver = new AndroidDriver<WebElement>(new URL("http://localhost:4723/wd/hub"), cap);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
+//    
+//    @Test(dataProvider="update")
+//	public void f(String task, String description, String result) throws Exception {
+//    	upDate(task, description, result);
+//    	
+//    }
     
-    @Test(dataProvider="update")
-	public void f(String task, String description) throws Exception {
-    	upDate(task, description);
+    @Test
+	public void f() throws Exception {
+    	delete(); 
     }
     
     @AfterTest
@@ -42,7 +48,7 @@ public class TestUpdate {
 		driver.quit();//thoát
 	}
     
-    public void upDate(String task, String description) {
+    public void upDate(String task, String description, String result) {
     	
     	WebElement retrieved = driver.findElement(By.id("com.nhuy.todolist:id/retrieved"));
     	retrieved.click();
@@ -58,7 +64,7 @@ public class TestUpdate {
 		WebElement updateBtn = driver.findElement(By.id("com.nhuy.todolist:id/btnUpdate"));
 		updateBtn.click();
 		
-    	WebElement cancelBtn = driver.findElement(By.id("com.nhuy.todolist:id/cancelBtn"));
+    	WebElement cancelBtn = driver.findElement(By.id("com.nhuy.todolist:id/btnCancelUpdate"));
     	cancelBtn.click();
     }
     
@@ -71,7 +77,7 @@ public class TestUpdate {
     
     @DataProvider(name = "update")
 	public Object[][] dataProvider() throws Exception {
-		ReadFile.setExcelFile(Links.PATH_TO_EXCEL, "Sheet2");
+		ReadFile.setExcelFile(Links.PATH_TO_EXCEL, "Sheet3");
 		Object[][] testData = ReadFile.getTestData("invalid");
 		return testData;
 	}
